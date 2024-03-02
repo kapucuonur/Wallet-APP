@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallet App</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="wallet">
+        <h1>Wallet App 
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V192c0-35.3-28.7-64-64-64H80c-8.8 0-16-7.2-16-16s7.2-16 16-16H448c17.7 0 32-14.3 32-32s-14.3-32-32-32H64zM416 272a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg>
+        </h1>
+        <div class="balance">
+            <h2 id="balance-title">Balance: <span id="balance">0</span> €</h2>
+        </div>
+        <div class="transactions">
+            <h2 id="transactions-title">Transactions</h2>
+            <ul id="transaction-list">
+                <!-- Transactions will be added here dynamically -->
+            </ul>
+        </div>
+        <div class="controls">
+            <input type="date" id="date">
+            <input type="text" id="description" placeholder="Enter description">
+            <input type="number" id="amount" placeholder="Enter amount">
+            <select id="type">
+                <option value="income">Income</option>
+                <option value="expense">Expense</option>
+            </select>
+            <button onclick="addTransaction()">Add Transaction</button>
+        </div>
+        <div class="summary">
+            <h2 id="summary-title">Summary</h2>
+            <p id="income-text">Income: <span id="income">0</span> €</p>
+            <p id="expense-text">Expense: <span id="expense">0</span> €</p>
+            <p id="remaining-text">Remaining Balance: <span id="remaining">0</span> €</p>
+            <h3 id="summary-transaction-title">Transaction Summary</h3>
+            <ol id="summary-transaction-list">
+                <!-- Summary transactions will be added here dynamically -->
+            </ol>
+            <button onclick="clearTransactions()" id="clear-button">Clear Transactions</button>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>
